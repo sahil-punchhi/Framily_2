@@ -1,0 +1,26 @@
+.home__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+video#bgvid1 {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+video#bgvid2 {
+  object-fit: cover;
+  width: 100vw;
+  height: 60vh;
+  margin-top: -1.6rem;
+}
+.home__buttons__container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}

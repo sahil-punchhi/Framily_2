@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+a {
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(66, 66, 66);
+  border-bottom: 1px solid rgb(212, 212, 212);
+}
+.header__brand {
+  font-size: 2.2rem;
+  letter-spacing: 0.3rem;
+  cursor: pointer;
+}
+.account__icon,
+.heart__icon {
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+.header__button {
+  margin: 0 0.5rem !important;
+}

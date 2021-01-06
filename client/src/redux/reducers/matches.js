@@ -1,4 +1,4 @@
-const matchReducer = (state = [], action) => {
+export const matchReducer = (state = [], action) => {
   switch (action.type) {
     case 'SOMETHING':
       return state;

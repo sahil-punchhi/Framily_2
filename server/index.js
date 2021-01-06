@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
-const userRoutes = require('./routes/users');
+const authRouter = require('./routes/auth');
 
 // MONGO Connection URL
 const MONGODB_CONNECTION_URL =
@@ -12,10 +12,8 @@ const MONGODB_CONNECTION_URL =
 const PORT = process.env.PORT || 5000;
 const app = express();
 
-// Routes
-app.use('/users', userRoutes);
-
 // Middlewares
+app.use(express.json());
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
@@ -31,3 +29,6 @@ mongoose
   )
   .catch((error) => console.log(error));
 mongoose.set('useFindAndModify', false);
+
+// Routes
+app.use('/auth', authRouter);
